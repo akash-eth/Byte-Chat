@@ -1,3 +1,5 @@
 from django.contrib import admin
 
-# Register your models here.
+from personal.models import description
+
+admin.site.register(description)
