@@ -11,6 +11,9 @@
 
 {% endfor %} -->
 
+{% for question in questions %}
+    {% include "personal/snippets/body_snippet.html" with value=questions %}
+{% endfor %}
 
 </div>
 
