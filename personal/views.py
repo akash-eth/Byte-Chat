@@ -1,5 +1,6 @@
 from django.shortcuts import render
 
+from account.models import Account
 
 def home_screen_view(request):
 
@@ -15,6 +16,8 @@ def home_screen_view(request):
 
     # questions = Question.objects.all()
     # context['questions'] = questions
+    accounts = Account.objects.all()
+    context['account'] = accounts
 
 
     return render(request, 'personal/home.html',context)
