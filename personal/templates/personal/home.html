@@ -11,8 +11,10 @@
 
 {% endfor %} -->
 
-{% for question in questions %}
-    {% include "personal/snippets/body_snippet.html" with value=questions %}
+{% for account in accounts %}
+    <p>
+        {{account.username}} | {{account.date_joined}}
+    </p>
 {% endfor %}
 
 </div>
