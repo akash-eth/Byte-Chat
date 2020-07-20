@@ -27,5 +27,5 @@ from account.views import (
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',home_screen_view,name='home'),
-    path('account/registration_form', registration_view, name="register"),
+    path('register/', registration_view, name="register"),
 ]
