@@ -20,7 +20,12 @@ from personal.views import (
     home_screen_view,
 )
 
+from account.views import (
+    registration_view,
+)
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',home_screen_view,name='home'),
+    path('account/registration_form', registration_view, name="register"),
 ]
