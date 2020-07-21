@@ -3,19 +3,12 @@
 {% block content %}
 
 <div>
-
-<!-- {% for list_item in list_of_value %}
-
-    {{list_item}} 
-    {% include 'personal/snippets/body_snippet.html' with value=list_item %}
-
-{% endfor %} -->
-
-{% for account in accounts %}
-    <p>
-        {{account.username}} | {{account.date_joined}}
-    </p>
-{% endfor %}
+<h3>Registered Users:</h3>
+    {% for account in accounts %}
+        <p>
+            {{account.username}} | {{account.date_joined}}
+        </p>
+    {% endfor %}
 
 </div>
 
