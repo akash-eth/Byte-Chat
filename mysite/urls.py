@@ -30,6 +30,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',home_screen_view,name='home'),
     path('register/', registration_view, name="register"),
-    path('logout/', logout, name="logout"),
-    path('login/', login, name="login"),
+    path('logout/', logout_view, name="logout"),
+    path('login/', login_view, name="login"),
 ]

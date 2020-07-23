@@ -20,7 +20,7 @@ def registration_view(request):
     else:
         form = RegistrationForm()
         context['registration_form'] = form
-        return render(request,'account/register.html',context)
+        return render(request,'account/registration.html',context)
 
 def logout_view(request):
     logout(request)
