@@ -6,19 +6,20 @@ from account.models import Account
 class RegistrationForm(UserCreationForm):
     email = forms.EmailField(max_length=60, help_text="Required!!! Add a valid arg")
     
-    class meta:
+    class Meta:
         model = Account
-        fields = ('email', 'username', 'password1', 'password2')
+        fields = ("email", "username", "password1", "password2")
 
-class AccountAuthenticationForm(forms.ModelForm):
+class AccountAuthenticationForm(forms.Form):
     password = forms.CharField(label='Password',widget=forms.PasswordInput)
     
-    class meta:
+    class Meta:
         model = Account
-        fields = ('email', 'password')
+        fields = ("email", "password")
+        
     def clean(self):
         if self.is_valid():
-            email = self.cleaned_data
-            password = self.cleaned_data['password']
-        if not authenticate(email=email, password=password):
-            raise forms.ValidationError("!! Invalid Credentials !!")
+            email = self.cleaned_data["email"]
+            password = self.cleaned_data["password"]
+            if not authenticate(email=email, password=password):
+                raise forms.ValidationError("!! Invalid Credentials !!")
