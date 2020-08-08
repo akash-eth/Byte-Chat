@@ -2,23 +2,24 @@
 
 {% block content %}
 
+<!--DARK MODE-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {
-  padding: 25px;
+  padding: 15px;
   background-color: white;
   color: black;
-  font-size: 25px;
+  font-size: 15px;
 }
 
 .dark-mode {
-  background-color: black;
-  color: white;
+  background-color: rgb(0, 0, 0);
+  color: rgb(55, 67, 235);
 
 }
 </style>
 
-<button onclick="myFunction()">Dark Mode</button>
+<button onclick="myFunction()">Change Theme</button>
 
 <script>
 function myFunction() {
@@ -26,20 +27,86 @@ function myFunction() {
    element.classList.toggle("dark-mode");
 }
 </script>
-<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-    <h1 class="display-4" style="font-family:verdana">ByteChat</h1>
-    <p class="lead">Bringing everyone together to connect to a Tech-Tought sharing platform</p>
-</div>
+<!--DARK MODE END-->
+
+<!--CSS STYLING-->
+<style type="text/css">
+
+	@media (max-width: 768px) { 
+		.right-column{
+			margin-left: 0px;
+		}
+	}
+
+	@media (min-width: 768px) { 
+		.right-column{
+			margin-left: 20px;
+		}
+	}
+
+	.blog-post-container{
+		margin-bottom: 20px;
+		width: 100%;
+	}
+	.create-post-bar{
+		background-color: #fff;
+		margin-bottom:20px;
+	}
+
+	.left-column{
+		padding:0px;
+	}
+
+	.right-column{
+		padding:0px;
+	}
+	.lead{
+		font-size: 17px;
+	}
+</style>
+<!--END CSS STYLING-->
+
+<!--HTML STUFF-->
 
 <div class="container">
-    <div class="d-flex flex-column"> <!--Flex-column-->
-        <h3>Registered Users:</h3>
-            {% for account in accounts %}
-                <p>
-                    {{account.username}} | {{account.date_joined}}
-                </p>
-            {% endfor %}
+    <div class="row">
+
+        <!--Right 'create post' bar-->
+        <div class="create-post-bar d-lg-none col-lg-7 offset-lg-1 flex-column">
+            <a href="#">Create Post</a>
+        </div>
+        <!--End Right 'create post' bar-->
+        
+        <!--Blog Feed-->
+        <div class="left-column col-lg-7 offset-lg-1">
+            <div class="blog-post-container">
+                <p>Thingy</p>
+            </div>
+
+            <div class="blog-post-container">
+                <p>Thingy</p>
+            </div>
+
+            <div class="blog-post-container">
+                <p>Thingy</p>
+            </div>
+        </div>
+        <!--End Blog Feed-->
+        
+        <!--Right 'create post' column-->
+        <div class="right-column col-lg-3 d-lg-flex d-none flex-column">
+            <div class="create-post-bar">
+                <p>Stufff</p>
+                <p>Stufff</p>
+                <p>Stufff</p>
+                <a href="#">Create Post</a>
+            </div>
+        </div>
+        <!--End Right 'create post' column-->
     </div>
 </div>
+
+
+<!--End HTML STUFF-->
 
 {% endblock content %}
