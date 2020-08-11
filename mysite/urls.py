@@ -38,7 +38,7 @@ urlpatterns = [
     path('register/', registration_view, name="register"),
     path('logout/', logout_view, name="logout"),
     path('login/', login_view, name="login"),
-    path('account', account_view, name="account"),
+    path('account/', account_view, name="account"),
     path('must_authenticate/', must_authenticate_view, name="must authenticate"),
 
     path('password_change/done/', auth_views.PasswordChangeDoneView.as_view(template_name='registration/password_change_done.html'), name='password_change_done'),
