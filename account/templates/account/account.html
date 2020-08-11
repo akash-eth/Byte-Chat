@@ -34,6 +34,11 @@
   .h3{
     text-align: center;
   }
+  .blog-posts{
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+  }
 </style>
 
 
@@ -82,7 +87,7 @@
       {% if blog_posts %}
         <ul class="list-group">
         {% for post in blog_posts %}
-          <a href="{% url 'blog:detail' post.slug %}" style="text-decoration: none;"><li class="list-group-item">{{post}}</li></a>
+          <a href="{% url 'blog:detail' post.slug%}" style="text-decoration: none;"><li class="list-group-item">{{post}}</li></a>
         {% endfor %}
         </ul>
       {% else %}
