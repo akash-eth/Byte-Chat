@@ -1,4 +1,4 @@
-## ============================== Byte-Chat ============================== ##
+### ======================== Byte-Chat ======================== ###
 Byte-Chat is a code sharing platform, where participants can share there code-templates, 
 get there questions answered over the community.
 
