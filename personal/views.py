@@ -1,23 +1,14 @@
 from django.shortcuts import render
+from operator import attrgetter
 
-from account.models import Account
+from blog.models import BlogPost
+
+
 
 def home_screen_view(request):
+	
+	context = {}
+	blog_posts = sorted(BlogPost.objects.all(), key=attrgetter('date_updated'), reverse=True)
+	context['blog_posts'] = blog_posts
 
-    context = {}
-
-    # list_of_value = []
-    
-    # list_of_value.append('first')
-    # list_of_value.append('second')
-    # list_of_value.append('third')
-
-    # context['list_of_value'] = list_of_value
-
-    # questions = Question.objects.all()
-    # context['questions'] = questions
-    accounts = Account.objects.all()
-    context['accounts'] = accounts
-
-
-    return render(request, 'personal/home.html',context)
+	return render(request, "personal/home.html", context)
