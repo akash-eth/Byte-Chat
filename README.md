@@ -4,3 +4,7 @@ get there questions answered over the community.
 
 This platform is designed using Django Framework. For generatinf REST-Full API's we have used
 DRF (Django-REST-Framework), which will allow communication by any system or service provider.
+
+Just take a pull and run using:
+    $pip install requirements.txt
+    $python manage.py runserver
