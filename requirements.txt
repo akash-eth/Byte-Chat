@@ -65,7 +65,7 @@ soupsieve==2.0.1
 sqlparse==0.3.0
 toml==0.10.1
 tox==3.15.2
-urllib3==1.25.9
+urllib3==1.26.5
 virtualenv==20.0.23
 virtualenvwrapper-win==1.2.6
 vobject==0.9.6.1
