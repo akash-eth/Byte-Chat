@@ -5,7 +5,7 @@ atomicwrites==1.4.0
 attrs==19.3.0
 beautifulsoup4==4.9.1
 bitcoin==1.1.42
-certifi==2020.6.20
+certifi==2022.12.7
 cffi==1.14.0
 chardet==3.0.4
 colorama==0.4.3
